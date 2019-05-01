@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>History & Geography</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" href="game.css">
+	<script  src="jquery.js"></script>
+	<script  src="jquery.mobile-1.4.5.js"></script>
+	<link rel="stylesheet"  href="jquery.mobile-1.4.5.css">
+
+	<style>
+		/*Button codes start here!*/
+		.ui-content .btn-group button {
+		  background-color: #4CAF50; /* Green background */
+		  border: 1px solid green; /* Green border */
+		  color: white; /* White text */
+		  padding: 10px 24px;
+		  cursor: pointer; /* Pointer/hand icon */
+		  width: 50%; /* Set a width if needed */
+		  display: block; /* Make the buttons appear below each other */
+		  margin-left: auto;
+		  margin-right: auto;
+		}
+
+		.ui-content .btn-group button:not(:last-child) {
+		  border-bottom: none; /* Prevent double borders */
+		}
+
+		/* Add a background color on hover */
+		.ui-content .btn-group button:hover {
+		  background-color: #3e8e41;
+		  color: white;
+		}
+
+		@media only screen and (min-width:321px) and (max-width:480px){
+			.ui-content .btn-group button {
+				width: 80%;
+			}
+		 }
+		/*Button codes end here!*/
+
+		/*accordion codes start here!*/
+		.accordion {
+		  background-color: #eee;
+		  color: #444;
+		  cursor: pointer;
+		  padding: 18px;
+		  width: 100%;
+		  border: none;
+		  text-align: left;
+		  outline: none;
+		  font-size: 15px;
+		  transition: 0.4s;
+		}
+
+		.active, .accordion:hover {
+		  background-color: #ccc;
+		}
+
+		.accordion:after {
+		  content: '\002B';
+		  color: #777;
+		  font-weight: bold;
+		  float: right;
+		  margin-left: 5px;
+		}
+
+		.active:after {
+		  content: "\2212";
+		}
+
+		.panel {
+		  padding: 0 18px;
+		  background-color: white;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		}
+		/*accordion codes end here!*/
+
+
+		/* images codes start here!*/
+		* {
+		  box-sizing: border-box;
+		}
+
+		.column {
+		  float: left;
+		  width: 33.33%;
+		  padding: 5px;
+		}
+
+		/* Clearfix (clear floats) */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 500px) {
+		  .column {
+		    width: 100%;
+		  }
+		}
+
+		/*images codes end here!*/ 
+
+
+
+		/*button splash screen start here!*/
+		.button {
+		  background-color: grey;
+		  border: none;
+		  color: black;
+		  padding: 10px 20px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  border-radius: 16px;
+		}
+
+		.button:hover {
+		  background-color: #f1f1f1;
+		}
+
+		/* buttons splash screen end here!*/
+	</style>
+</head>
+
+<body>
+	<div data-role="page" id="pageone" data-theme="a">
+
+		<div data-role="header">
+			
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+					<li><a href="#pagetwo" class="ui-btn ui-icon-grid ui-btn-icon-top">Menu</a></li>
+					<li><a href="quiz.html" class="ui-btn ui-icon-edit ui-btn-icon-top">Quiz</a></li>
+				</ul>	
+			</div>
+
+		</div>
+
+		<div role="main" class="ui-content" style="background-color: #FFFF66;">
+			<img height="146" width="100" src="images/globe2.gif" alt="Aapravasi-Ghat" style="width:100%">
+			<h1 style="text-align: center;">SOCIAL, SCIENTIFIC AND ENVIRONMENTAL EDUCATION</h1>
+			<button class="button" onclick="parent.location='#pagetwo'">GET STARTED</button>
+		</div>
+
+	<!--<div data-role="footer">
+			<h1>footer</h1>
+		</div>-->
+
+
+	</div>
+
+
+	<div data-role="page" id="pagetwo" data-theme="a">
+
+		<div data-role="header">
+			
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+					<li><a href="#pagetwo" class="ui-btn ui-icon-grid ui-btn-icon-top">Menu</a></li>
+					<li><a href="quiz.html" class="ui-btn ui-icon-edit ui-btn-icon-top">Quiz</a></li>
+			</div>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<div class="btn-group">
+				<button onclick="parent.location='#pagehistory'">Historical Places</button>
+				<button>Nature Reserves</button>
+				<button>Places of worship</button> 
+			</div>
+		</div>
+
+		<div data-role="footer">
+			<h1>footer</h1>
+		</div>
+		
+
+	</div>
+
+	<!--<div data-role="page" id="pagethree" data-theme="a">
+
+		<div data-role="header">
+			
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pageone" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+					<li><a href="#pagetwo" class="ui-btn ui-icon-grid ui-btn-icon-top">Menu</a></li>
+					<li><a href="#pagethree" class="ui-btn ui-icon-edit ui-btn-icon-top">Quiz</a></li>
+			</div>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<p>nsnsnsns</p>
+
+		</div>
+
+
+		<div data-role="footer">
+			<h1>footer</h1>
+		</div>
+		
+
+	</div>-->
+
+
+	<div data-role="page" id="pagehistory" data-theme="a">
+
+		<div data-role="header">
+			
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="home.html" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+					<li><a href="#pagetwo" class="ui-btn ui-icon-grid ui-btn-icon-top">Menu</a></li>
+					<li><a href="quiz.html" class="ui-btn ui-icon-edit ui-btn-icon-top">Quiz</a></li>
+			</div>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<button class="accordion">Aapravasi Ghat</button>
+			<div class="panel">
+
+					<img height="150" width="100"src="images/Aapravasi-Ghat.jpg" alt="Aapravasi-Ghat" style="width:100%">
+
+					<p style="text-align: justify;">A UNESCO World Heritage Site, Aapravasi Ghat, or Immigration Depot, is a complex of buildings which were used back in the day for bonded labourers from India. The place, located on the seaside, now houses an interpretation centre. Guided tours help gain more knowledge about different structures and remains found here. Life-size models are also added to the paraphernalia, making the place more real and striking.
+
+					One of the most significant historical places in Mauritius, the depot holds a mirror to the past and practices of colonialism. Between the years 1850 to 1923, almost five hundred thousand people were brought here to be shipped to different colonies of Britain around the globe.
+					</p>
+
+			</div>
+
+			<button class="accordion">Baie De l'Arsenal / Arsenal Bay</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Arsenal-Bay.jpg" alt="Arsenal-Bay" style="width:100%">
+
+				<p style="text-align: justify;">The ruins of a French Arsenal can be found in this bay area known as Arsenal Bay, located in the north of the country. One of the lesser known historical places of Mauritius, the village of Arsenal was home to a French foundry, which produced cannons and all other kinds of military supplies. However, it was destroyed back in 1774 due to an explosion killing around 300 slaves.</p>
+			</div>
+
+			<button class="accordion">St Aubin House</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Aubin-House.jpg" alt="Aubin-House" style="width:100%">
+
+			  	<p style="text-align: justify;">One of the best historical places in Mauritius, the plantation of St. Aubin goes back almost two hundred years. The factory was shifted in the seventies and the estate no longer deals in sugar. However, the lawns of this huge house are now home to a rum distillery. There is a vanilla house, spice garden, tropical garden here as well.</p>
+			</div>
+
+			<button class="accordion">Beau Plan Sugar Mill / Aventure Du Sucre</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Beau-Plan.jpg" alt="Beau-Plan" style="width:100%">
+
+				<p style="text-align: justify;">Another sugar factory, the Beau Plan serves as a museum, placing it on every list of top historical places in Mauritius. The exhibition here covers the tale of sugar, crisscrossing with the history of the island, rum trade as well as the practice of slavery.
+
+					The tour will take anywhere from two to three hours. The factory itself was started back in 1797, and it was closed down on the turn of the century in 1999. The museum also has videos as well as interactive sessions where you can gain more knowledge about the history of the place.
+					</p>
+			</div>
+			
+			<button class="accordion">Martello Tower</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Martello-Tower.jpg" alt="Martello-Tower" style="width:100%">
+
+				<p style="text-align: justify;">The five towers were built back in 1800’s by the British to protect their colony from the French, who apparently were trying to instigate the slaves. The tower located at La Preneuse is now serving as a museum where experts explain the incredible architecture of the towers. Apparently, these towers are all three metres thick, with copper cannons which could shoot at a range of about 2 kilometres.</p>
+			</div>
+
+
+			<button class="accordion">Eureka House</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Eureka-House.jpg" alt="Eureka-House" style="width:100%">
+
+				<p>Built in the early 1800’s as a grand mansion, this place is a museum now, providing an insight into the colonial past of the country. The house itself bears characteristics of tropical architecture with about 109 doors and a large number of rooms to keep the place cool even in scorching summers. The place houses many antiques, pieces of furniture and maps dating back to French East India Company along with servant quarters and kitchens</p>
+			</div>
+
+
+			<button class="accordion">Le Morne</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Le-Morne.jpg" alt="Le-Morne" style="width:100%">
+
+				<p style="text-align: justify;">Another UNESCO World Heritage Site, the place is undoubtedly one of the most famous places of historical interest in Mauritius. It is simply a mountain located southwest of the island, which provided shelter to a number of slaves who dared to run away from their masters back in the day. Given the place’s dangerous, inaccessible topography, the slaves who got away created their own communities here and stayed in the caves. The place is a huge symbol of their fight for freedom and the uncrushable human spirit.</p>
+			</div>
+
+			<button class="accordion">Matthew Flinders Monument</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Matthew-Flinders.jpg" alt="Matthew-Flinders Monument" style="width:100%">
+
+				<p style="text-align: justify;">Built only 15 years back in 2003, this is one of the few historical monuments in Mauritius. The place is dedicated to Matthew Flinders, the English cartographer and explorer, who first identified Australia as a continent. It commemorates the two hundredth anniversary of his arrival in the country. Interestingly, when he first arrived on the island, he got imprisoned for six years as England and France were at war.</p>
+			</div>
+
+
+			<button class="accordion">Citadel Fort</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/Citadel-Fort.jpg" alt="Citadel-Fort" style="width:100%">
+
+				<p style="text-align: justify;">Also known as Fort Adelaide, this military building was built by the British back in the nineteenth century. You can enjoy panoramic views of the capital, Port Louis, as well as the harbour from the top. The barracks of the old times have been converted into boutiques where you can pick souvenirs up from.</p>
+			</div>
+
+
+			<button class="accordion">La Route Du Thé (Bois Cheri)</button>
+			<div class="panel">
+
+				<img height="150" width="100" src="images/tea-plantation.jpg" alt="Bois Cheri" style="width:100%">
+
+				<p style="text-align: justify;">Bois Cheri is a famous tea plantation, which is one of three most prominent stops on La Route du Thé. Located around twelve kilometres from the famous Rivière des Anguilles, these tea gardens cover an area of about 250 hectares. You can book a tour of the premises where you will get to know in deep about the history as well as the functioning of the plantation, making it one of the must-visit historical places in Mauritius.
+
+				There is an exhibition space here as well, showcasing the centuries of history of this place. 
+				</p>
+			</div>
+
+			<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function() {
+			    this.classList.toggle("active");
+			    var panel = this.nextElementSibling;
+			    if (panel.style.maxHeight){
+			      panel.style.maxHeight = null;
+			    } else {
+			      panel.style.maxHeight = panel.scrollHeight + "px";
+			    } 
+			  });
+			}
+			</script>
+
+		</div>
+
+
+		<div data-role="footer">
+			<h1>footer</h1>
+		</div>
+		
+
+	</div>
+</body>
+
+
+
+
+</html>
